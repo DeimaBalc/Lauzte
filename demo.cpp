@@ -136,11 +136,45 @@ int main() {
     std::cout << "=== Starting Tests for Lauzte3D Program ===\n";
     
     // Test Taskas3D class
-    testTaskas3D();
+    //testTaskas3D();
     
     // Test Lauzte3D class
-    testLauzte3D();
+   // testLauzte3D();
     
-    std::cout << "\n=== All Tests PASSED ===\n";
+   // std::cout << "\n=== All Tests PASSED ===\n";
+
+    // Sukuriame atskirus 3D taškus
+    Taskas3D t1(1.0, 2.0, 3.0);
+    Taskas3D t2(4.0, 5.0, 6.0);
+    Taskas3D t3(7.0, 8.0, 9.0);
+
+    // Spausdiname atskirus taškus
+    std::cout << "Taskas 1: " << t1.to_string() << std::endl;
+    std::cout << "Taskas 2: " << t2.to_string() << std::endl;
+    
+    // Apskaičiuojame ir spausdiname atstumą tarp taškų
+    std::cout << "Atstumas tarp tasku 1 ir 2: " << t1.atstumas(t2) << std::endl;
+
+    // Sukuriame taškų masyvą laužtei
+    Taskas3D taskai[] = {t1, t2, t3};
+    
+    // Sukuriame laužtę su 3 taškais
+    Lauzte3D lauzte(3, taskai);
+    
+    // Spausdiname laužtę
+    std::cout << "\nLauzte: " << lauzte.to_string() << std::endl;
+    
+    // Apskaičiuojame ir spausdiname bendrą laužtės ilgį
+    std::cout << "Bendras lauztes ilgis: " << lauzte.ilgis() << std::endl;
+
+    // Pademonstruojame taškų gavimą ir nustatymą
+    std::cout << "\nPirmas lauztes taskas: " << lauzte.getTaskas(0).to_string() << std::endl;
+    
+    // Modifikuojame tašką laužtėje
+    Taskas3D naujasTaskas(0.0, 0.0, 0.0);
+    lauzte.setTaskas(0, naujasTaskas);
+    
+    std::cout << "Lauzte po modifikacijos: " << lauzte.to_string() << std::endl;
+
     return 0;
 }
