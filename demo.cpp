@@ -30,15 +30,15 @@ void testTaskas3D() {
     std::cout << "Default constructor: PASSED\n";
     
     // Test keisk methods
-    t2.keiskX(5.0);
-    t2.keiskY(6.0);
-    t2.keiskZ(7.0);
+    t2.setX(5.0);
+    t2.setY(6.0);
+    t2.setZ(7.0);
     std::cout << "After keiskX/Y/Z: " << t2.to_string() << std::endl;
     assert(t2.getX() == 5.0);
     assert(t2.getY() == 6.0);
     assert(t2.getZ() == 7.0);
     
-    t2.keiskTaska(10.0, 11.0, 12.0);
+    t2.setTaska(10.0, 11.0, 12.0);
     std::cout << "After keiskTaska: " << t2.to_string() << std::endl;
     assert(t2.getX() == 10.0);
     assert(t2.getY() == 11.0);

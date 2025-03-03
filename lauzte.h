@@ -12,33 +12,28 @@ public:
     
     Taskas3D(double x = 0, double y = 0, double z = 0);
     
-    
     double getX() const;
     double getY() const;
     double getZ() const;
     
-    
     std::string to_string() const;
     double atstumas(const Taskas3D &kitas) const;
     
-    
-    void keiskTaska(double x, double y, double z);
-    void keiskX(double x);
-    void keiskY(double y);
-    void keiskZ(double z);
-    
+    void setTaska(double x, double y, double z);
+    void setX(double x);
+    void setY(double y);
+    void setZ(double z);
     
 };
-
 
 class Lauzte3D {
 private:
     int n;             
-    Taskas3D* taskai;  
+    Taskas3D* taskuKoord;  
 public:
     // Konstruktoriai ir destruktorius
     Lauzte3D();                                 // numatytasis konstruktorius (sukuria laužtę iš vieno taško (0,0,0))
-    Lauzte3D(int n, const Taskas3D* lauzte);     // konstruktorius su parametrais
+    Lauzte3D(int n, const Taskas3D* taskai);     // konstruktorius su parametrais
     Lauzte3D(const Lauzte3D& other);             // kopijos konstruktorius
     ~Lauzte3D();                                // destruktorius
 
