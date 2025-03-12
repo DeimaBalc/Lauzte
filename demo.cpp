@@ -136,10 +136,10 @@ int main() {
     std::cout << "=== Starting Tests for Lauzte3D Program ===\n";
     
     // Test Taskas3D class
-    //testTaskas3D();
+    testTaskas3D();
     
     // Test Lauzte3D class
-   // testLauzte3D();
+    testLauzte3D();
     
    // std::cout << "\n=== All Tests PASSED ===\n";
 

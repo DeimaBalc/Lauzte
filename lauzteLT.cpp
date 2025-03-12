@@ -77,6 +77,11 @@ int Lauzte3D::getN() const {
 
 Taskas3D Lauzte3D::getTaskas(int index) const {
 
+    if (index < 0 || index >= n) {
+        
+        return Taskas3D(0, 0, 0);
+    }
+
     return taskuKoord[index];
 
 }
